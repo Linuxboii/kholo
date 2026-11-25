@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kholo - Decode JWT, Base64, URL, hex and timestamps offline</title>
+  <meta name="description" content="Paste a JWT, Base64, URL-encoded string, hex, HTML entities, JSON or a Unix timestamp. Kholo detects it and decodes it in your browser, so tokens never touch a server.">
+  <link rel="stylesheet" href="base.css">
+  <style>
+    :root { --accent: #15803d; }
+    @media (prefers-color-scheme: dark) { :root { --accent: #4ade80; --accent-ink: #052e14; } }
+    .badge { display: inline-block; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); }
+    pre#out { margin: 0; white-space: pre-wrap; word-break: break-all; font: 14px/1.55 var(--mono); background: var(--surface-2); border-radius: var(--radius); padding: 14px; min-height: 180px; max-height: 60vh; overflow: auto; }
+    .ops { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ops button { font-size: 13px; padding: 6px 10px; font-weight: 500; }
+    .ops button[aria-pressed=true] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <h1>Kholo</h1>
+    <p>Paste an encoded string and read what is inside. Decoding happens on this page, so tokens and secrets are never uploaded.</p>
+  </div></header>
+  <main><div class="wrap grid-2">
+    <section class="panel stack">
+      <div class="row" style="justify-content:space-between"><label for="in" style="font-weight:600;font-size:14px">Input</label><span class="badge" id="kind" aria-live="polite">Waiting for input</span></div>
+      <textarea id="in" spellcheck="false" placeholder="Paste a JWT, Base64, %20-encoded text, hex, JSON or a timestamp"></textarea>
+      <div class="ops" id="ops" role="group" aria-label="Operation"></div>
+    </section>
+    <section class="panel stack">
+      <div class="row" style="justify-content:space-between"><span style="font-weight:600;font-size:14px">Output</span><span class="muted small" id="note"></span></div>
+      <pre id="out" aria-live="polite"></pre>
+      <p class="err" id="err" role="alert"></p>
+      <div class="row"><button class="primary" id="copy" type="button">Copy output</button><button id="chain" type="button">Use as input</button><button id="uuid" type="button" class="ghost">New UUID</button></div>
+    </section>
+  </div></main>
+  <footer class="bottom"><div class="wrap">
+    <span>Kholo. Free and open source. JWT signatures are shown, not verified.</span>
+    <span><a href="https://github.com/Linuxboii/kholo">Source</a> &nbsp; <a href="https://sushanth.avlokai.com">Made by Sushanth Kasturi</a></span>
+  </div></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

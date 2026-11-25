@@ -1,0 +1,12 @@
+{
+  "name": "kholo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Decode JWT, Base64, URL, hex and timestamps offline",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve -l 5173 ."
+  }
+}
