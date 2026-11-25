@@ -16,6 +16,14 @@ Decode JWT, Base64, URL, hex and timestamps offline.
 
 JWT signatures are displayed, not verified. Everything runs on the page.
 
+## Demand
+
+Semrush estimates base64decode.org, a single-purpose Base64 decoder, at roughly 7.7 to 9.7 million visits a month.
+
+- [Semrush: base64decode.org](https://www.semrush.com/website/base64decode.org/overview/)
+
+These figures measure demand for the task, from existing tools. They are third-party estimates or company claims, not usage of this tool.
+
 ## Privacy
 
 Everything runs in your browser. There is no backend, no analytics and no account. Nothing you enter is uploaded.
